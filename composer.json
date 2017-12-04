@@ -10,7 +10,7 @@
     ],
     "require": {
         "php": "^7.0",
-        "laravel/framework": "5.5",
+        "laravel/framework": "^5.5",
         "cyber-duck/laravel-excel": "^1.2"
     },
     "autoload": {
