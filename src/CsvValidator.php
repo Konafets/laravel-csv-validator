@@ -2,6 +2,7 @@
 
 use Exception;
 use Illuminate\Support\Collection;
+use Importer;
 
 /**
  * Class CsvValidator
