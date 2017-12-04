@@ -1,5 +1,6 @@
 <?php namespace Konafets\CsvValidator;
 
+use Exception;
 use Illuminate\Support\Collection;
 use Importer;
 
@@ -62,7 +63,7 @@ class CsvValidator
         $this->setRules($newRules);
 
         if ($csvData->isEmpty()) {
-            throw new \Exception('Not data found in file.');
+            throw new Exception('Not data found in file.');
         }
 
         $newCsvData = [];
