@@ -15,7 +15,7 @@ class CsvValidatorServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->app->singleton('laravel-csv-validator', function () {
+        $this->app->singleton(CsvValidator::class, function () {
             return new CsvValidator();
         });
     }

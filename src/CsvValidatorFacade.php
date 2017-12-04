@@ -20,6 +20,6 @@ class CsvValidatorFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'laravel-csv-validator';
+        return CsvValidator::class;
     }
 }
