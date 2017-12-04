@@ -70,6 +70,7 @@ The Validator throws an exception when:
 * your CSV does not have any data.
 * Heading key not found.
 
+Some example code
 
     try {
         $csvValidator = CsvValidator::make($csv_path, $rules, $encoding);
@@ -80,3 +81,7 @@ The Validator throws an exception when:
     } catch (\Exception $e) {
         echo $e->getMessage();
     }
+    
+# Credits
+
+This package is heavily inspired by https://github.com/SUKOHI/CsvValidator. They use `maatwebsite/excel` as the underlying Excel library, while this package uses `box/sprout`.
