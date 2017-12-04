@@ -22,7 +22,10 @@
         "laravel": {
             "providers": [
                 "Konafets\\CsvValidator\\CsvValidatorServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "CsvValidator": "Konafets\\CsvValidator\\CsvValidatorFacade"
+            }
         }
     }
 }
