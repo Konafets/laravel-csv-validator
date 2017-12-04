@@ -38,7 +38,7 @@ class CsvValidator
         $this->rules = collect();
     }
 
-    public function make(string $csvPath, array $rules, bool $hasHeader = false) : CsvValidator
+    public function make(string $csvPath, array $rules) : CsvValidator
     {
         $this->setRules(collect($rules));
 
