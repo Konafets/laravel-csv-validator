@@ -2,7 +2,6 @@
 
 use Exception;
 use Illuminate\Support\Collection;
-use Importer;
 
 /**
  * Class CsvValidator
@@ -38,6 +37,12 @@ class CsvValidator
         $this->rules = collect();
     }
 
+    /**
+     * @param string $csvPath
+     * @param array $rules
+     * @return CsvValidator
+     * @throws Exception
+     */
     public function make(string $csvPath, array $rules) : CsvValidator
     {
         $this->setRules(collect($rules));
@@ -50,7 +55,7 @@ class CsvValidator
         $csvData = $this->removeHeadingRowFromCsv($csvData);
         $newRules = collect();
 
-        $this->rulesHeaderKeys->each(function ($headerKey) use ($newRules) {
+        $this->rulesHeaderKeys->each(function($headerKey) use ($newRules) {
             $keyIndex = $this->headingRow->search($headerKey);
 
             if ($keyIndex !== false) {
@@ -86,7 +91,7 @@ class CsvValidator
     {
         $errors = collect();
 
-        $this->csvData->each(function ($csvValues, $rowIndex) use ($errors) {
+        $this->csvData->each(function($csvValues, $rowIndex) use ($errors) {
             $validator = \Validator::make(array_values($csvValues), $this->rules->all());
 
             if ($this->headingRow->isNotEmpty()) {

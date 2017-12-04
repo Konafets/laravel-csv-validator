@@ -24,7 +24,8 @@
         },
         "laravel": {
             "providers": [
-                "Konafets\\CsvValidator\\CsvValidatorServiceProvider"
+                "Konafets\\CsvValidator\\CsvValidatorServiceProvider",
+                "Cyberduck\\LaravelExcel\\ExcelServiceProvider"
             ],
             "aliases": {
                 "CsvValidator": "Konafets\\CsvValidator\\CsvValidatorFacade"
