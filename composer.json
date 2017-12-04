@@ -1,0 +1,28 @@
+{
+    "name": "konafets/laravel-csv-validator",
+    "description": "A Laravel package to validate CSV files using cyberduck/laravel-excel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stefano Kowalke",
+            "email": "info@arroba-it.de"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "laravel/framework": "5.5",
+        "cyber-duck/laravel-excel": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Konafets\\CsvValidator\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Konafets\\CsvValidator\\CsvValidatorServiceProvider"
+            ]
+        }
+    }
+}
